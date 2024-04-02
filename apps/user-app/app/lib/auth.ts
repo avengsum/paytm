@@ -31,6 +31,7 @@ export const authOptions = {
                 }
                 return null;
             }
+            console.log("yaha hai")
 
             try {
                 const user = await db.user.create({
