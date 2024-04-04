@@ -10,6 +10,7 @@ export const authOptions = {
             phone: { label: "Phone number", type: "text", placeholder: "1231231231", required: true },
             password: { label: "Password", type: "password", required: true }
           },
+          
           // TODO: User credentials type from next-aut
           async authorize(credentials: any) {
             // Do zod validation, OTP validation here
@@ -31,7 +32,7 @@ export const authOptions = {
                 }
                 return null;
             }
-            console.log("yaha hai")
+            
 
             try {
                 const user = await db.user.create({
